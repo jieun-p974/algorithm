@@ -1,0 +1,29 @@
+<!-- 섬으로 향하라!
+
+'   + -- + - + -   '
+'   + --- + - +   '
+'   + -- + - + -   '
+'   + - + - + - +   '
+
+해(1)와 달(0),
+Code의 세상 안으로!(En-Coding) -->
+<!-- 암호 > 2진수 > 아스키코드 변환 문제 -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let data = ['   + -- + - + -   ','   + --- + - +   ','   + -- + - + -   ','   + - + - + - +   '];
+      let result = '';
+
+      for (let s of data){
+        console.log(String.fromCharCode(parseInt(s.replace(/ /g, '').replace(/\+/g, '1').replace(/-/g,'0'),2)));
+        result += String.fromCharCode(parseInt(s.replace(/ /g, '').replace(/\+/g, '1').replace(/-/g,'0'),2));
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
