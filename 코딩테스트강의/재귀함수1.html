@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 재귀함수: 내가 나를 호출하는 함수
+      // 반복문 <-> 재귀함수
+
+      // 1부터 100까지 더하기
+      // s += 1
+      // s += 2
+      // ....
+      // s += 100
+      let s = 0;
+      let n = 100;
+
+      for(let i = 1; i<101; i++){
+        s += i;
+      }
+      console.log(s);//O(n) 100번 반복
+      console.log(n*(n+1)/2);//O(1) 코드 한줄
+      // n*(n+1)/2는 n까지의 수를 다 더한 값과 같음
+      //알고리즘 문제를 풀때 해당 알고리즘을 나타낼 수 있는 수학 공식이 있는지 찾아봐야 한다. 효율차이가 심하기 때문
+
+      //1부터 5까지 곱하기
+      let m = 1;
+
+      for(let i=1; i< 6; i++){
+        m *= i;
+      }
+      console.log(m);
+    </script>
+  </body>
+</html>
