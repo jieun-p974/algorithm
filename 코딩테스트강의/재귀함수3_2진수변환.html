@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 재귀함수 2진수 변환
+      // 2     11     1
+      // 2      5     1
+      // 2      2     0
+      //        1
+
+      //처음부터 숫자를 뒤에 붙이는 방법
+      /*let result = '';
+      let x = 11;
+
+      while(true){
+        if(x%2 == 0){
+          result = '0'+ result;
+        } else {
+          result = '1'+ result;
+        }
+        x = Math.floor(x/2);
+        if(x==1 || x==0){
+          result = String(x) + result;
+          break;
+        }
+      }
+      console.log(result);*/
+
+      // 계산이 끝난 후에 출력을 거꾸로 하는 방법
+      let result = '';
+      let x = 11;
+
+      while(true){
+        if(x%2 == 0){
+          result += '0';
+        } else {
+          result += '1';
+        }
+        x = Math.floor(x/2);
+        if(x==1 || x==0){
+          result += String(x);
+          break;
+        }
+      }
+      console.log(result.split('').reverse().join(''));
+
+      // 재귀함수 사용하는 방법
+      function binaryFunc(num){
+        if(num == 1||num == 0){
+          return String(num);
+        }
+        return binaryFunc(Math.floor(num/2))+String(num%2);
+      }
+      console.log(binaryFunc(11));
+      /*
+      binaryFunc(11) = binaryFunc(5)+String(1)
+      binaryFunc(5) = binaryFunc(2)+String(1)
+      binaryFunc(2) = binaryFunc(2)+String(0)
+      binaryFunc(1) = 1 +String(0)
+      */
+    </script>
+  </body>
+</html>
