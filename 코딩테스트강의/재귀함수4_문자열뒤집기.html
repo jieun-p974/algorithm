@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let result = '';
+      let x = 'leehojun';
+      while(true){
+        if(x.length == 1){
+          result += x;
+          break;
+        }
+        let y = x.split('');
+        result += String(y.pop());
+        x = y.join('');
+      }
+      console.log(result);
+
+      function stringReverse(x){
+        if(x.length == 1){
+          return x
+        }
+        return x[x.length-1] + stringReverse(x.slice(0,x.length-1));
+      }
+      console.log(stringReverse('leehojun'));
+    </script>
+  </body>
+</html>
