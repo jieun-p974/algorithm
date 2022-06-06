@@ -29,7 +29,7 @@ function readLine() {
 function main() {
       var arr = [];
       // 6X6 배열을 만듬
-      for(arr_i = 0; arr_i < 6; arr_i++){
+      for(let arr_i = 0; arr_i < 6; arr_i++){
          arr[arr_i] = readLine().split(' ');
          arr[arr_i] = arr[arr_i].map(Number);
       }
@@ -54,6 +54,6 @@ function main() {
               arrs.push(sum);
           }
       }
-      // arrs 배열내에서 가장 큰 값을 출력하면 모래시계의 최대값을 출력할 수 있음 
+      // arrs 배열내에서 가장 큰 값을 출력하면 모래시계의 최대값을 출력할 수 있음
       console.log(Math.max.apply(null, arrs));
 }
